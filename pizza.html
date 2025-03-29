@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BANNER DESPLEGABLE</title>
+    <style>
+        /*el font family sirve para el tipo de letra, el margen,
+        el padding es para dar una separacion de cada texto y
+        el background color, sirve para dar un color determinado
+        al documento*/
+        body{
+            font-family: Arial,sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        /*CONTENEDOR PRINCIPAL*/
+        .banner-container {
+            width: 100%;
+            overflow: hidden;
+            position: relative;
+            background-color: #333;
+        }
+        /*CONTENEDOR DE IMAGENES QUE SE MOVERAN*/
+        .banner-images {
+            display: flex;
+            animation:scrollBanner 15s linear infinite;
+        }
+        /*ANIMACION DE DESPLAZAMIENTO HORIZONTAL*/
+        @keyframes scrollBanner {
+            0% {
+                transform: translateX(0);
+            }
+            100%{
+                transform: translateX(-100%);
+            }
+        }
+        /*ESTILOS PARA EL TEXTO DE BIENVENIDA*/
+        .welcome-text{
+            text-align: center;
+            font-size: 36px;
+            margin-top: 20px;
+            color: #333;
+        }
+        footer{
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+        footer a{
+            color: red;
+        }
+        .video{
+            text-align: center;
+            margin: 40px;
+        }
+        .video iframe{
+            width: 80%;
+            height: 500px;
+            border: none;
+            border-radius: 8px;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1 class="welcome-text">Bienvenidos a la Pizzeria NuevoAm@necer</h1>
+    </header>
+        <!--Banner de imagenes en movimiento-->
+        <div class="banner-container">
+            <div class="banner-images">
+                <img src="../CLASE3/imagenes/pizza-americana.jpg" alt="Pizza 1">
+                <img src="../CLASE3/imagenes/pizza-vegetariana.jpg" alt="Pizza 2">
+                <img src="../CLASE3/imagenes/pizza-hawaiana.jpg" alt="Pizza 3">
+            </div>
+        </div>
+
+        <br><br>
+        <section class="video">
+            <h2>Descubre como preparamos nuestra deliciosa Pizza</h2>
+            <iframe src="https://www.youtube.com/watch?v=6jNMinJKE40" 
+                title="Preparacion de Pizza">
+            </iframe>
+        </section>
+
+        <footer>
+            <!--Colocamos el copyright-->
+            <p>&copy; 2025 - Pizzeria NuevoAm@necer | Todos los derechos reservados</p>
+            <!--Añadimos numero de contacto-->
+            <!--El campo target, me permite crear una nueva pestaña-->
+            <p><strong> Contacto: </strong> <a href="https://wa.link/07wov3" target="_blank">991217620</a> </p>
+        </footer>
+    
+    
+</body>
+</html>
